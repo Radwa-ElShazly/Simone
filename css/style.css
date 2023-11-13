@@ -1,0 +1,394 @@
+*{
+box-sizing: border-box;
+margin:0;
+padding:0;
+}
+:root{
+   --mainColor:#20c997;
+   --scoundColor:#fff;
+   --grayColor:#888;
+   --mainFont:50px;
+
+}
+.homeSection{
+    background-image: url(../images/intro-bg.jpg);
+    background-position: center;
+    background-size:cover;
+    margin-bottom:100px;
+}
+.homeLayer{
+    background-color:rgba(1, 8, 15, 0.7);
+    width: 100%;
+    height:100%;
+}
+h1 span
+{
+   font-size:65px;
+   position: relative;
+}
+/* @keyframes */
+.navbar-brand{
+    font-size:40px;
+    color:var(--scoundColor);
+    font-weight:600;
+}
+.nav-link{
+    font-weight:600;
+    color:var(--scoundColor);
+}
+.nav-link:hover{
+    color:var(--mainColor);
+}
+.homeContent button{
+margin-top: 20px;
+border:var(--mainColor) 2px solid;
+border-radius:50px;
+padding:10px 45px;
+color:var(--mainColor);
+background-color:transparent;
+transition: 1s all;
+}
+.homeContent button:hover{
+    background-color:var(--mainColor);
+    color:var(--scoundColor);
+}
+.homeContent h1{
+    font-size:65px;
+    position: relative;
+}
+h1 span::after{
+position: absolute;
+content:"";
+right:-20px;
+top:50px;
+height:55px;
+width:5px;
+background:var(--scoundColor);
+transform: translateY(-50%);
+animation: blink 0.7s infinite;
+}
+h1 span .stop-blinking::after{
+    animation: none;
+}
+@keyframes blink {
+    50% {
+        opacity:0;
+    }
+}
+.homeContent p{
+    font-size: 25px;
+}
+#portfolio,#services,#contact{
+   background-color:#f8f9fa;
+   padding:50px;
+   margin:50px 0px;
+}
+
+.myHeader{
+  font-size:7em;
+  color: rgba(128, 128, 128, 0.1);
+}
+
+.sectionHeader h3{
+    font-size:2.4em;
+    position: relative;
+}
+.sectionHeader h3:after{
+    position: absolute;
+    content:"";
+    width:80px;
+    height:3px;
+    bottom:-10px;
+    left:50%;
+    transform: translateX(-50%);
+    background-color: #20c997;
+    transition: all .5s;
+}
+.sectionHeader:hover h3:after{
+    width:130px;
+}
+.subSection h6{
+    color: #777777;
+    font-size: 14px;
+    font-weight: 100;
+}
+
+.setting{
+position: fixed;
+right: 0;
+top:50%;
+transform: translateY(-80%);
+background-color: #444;
+border-top-left-radius:5px;
+border-bottom-left-radius:5px;
+padding:4px 10px;
+font-size: larger;
+}
+.arrowDirectop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right:10px;
+    bottom:20px;
+    background-color: #444;
+    border-radius:50%;
+    width:35px;
+    height:35px;
+    font-size:20px;
+}
+.arrowDirecbottom{
+    position: absolute;
+    bottom:20px;
+    left:50%;
+    transform: translateX(-50%);
+    font-size:29px;
+}
+/* about start */
+
+.profileName{
+    color:var(--mainColor);
+}
+.about-info,.about-mail{
+    position: relative;
+    margin:25px 0px 20px;
+}
+.about-info::after,.about-mail::after{
+    content: "";
+    position: absolute;
+    width:100%;
+    height:1px;
+    background-color:gray;
+    bottom: -5px;
+    left:50%;
+    transform: translateX(-50%);
+}
+.aboutContent{
+ font-size:15px;
+}
+.about-profile span{
+    color: #777777;
+    font-weight:400;
+}
+.about-mail span{
+    color: #20c997;
+    font-weight: 400;
+}
+.about-profile button{
+    margin:15px 5px 0px 0px;
+    background-color:var(--mainColor);
+    padding:15px 35px;
+    border-radius:40px;
+    border: none;
+    box-shadow: #777777;
+    font-size:14px;
+    color: var(--scoundColor);
+    transition:0.5s all;
+}
+.about-profile button:hover,.receiving-input .btn:hover{
+    background-color:#158161;
+}
+.number h3{
+   color: var(--grayColor);
+   font-size: 50px;
+   font-weight:600;
+}
+.number h4{
+ font-size: 16px;  
+}
+.number{
+   position: relative;
+   margin:40px 0px;/
+}
+.number::after{
+   content: "";
+   position: absolute;
+   height:130px;
+   left: 100%;
+   bottom:-40px;
+   border-left: 2px dashed var(--grayColor); /*change these values to suit your liking*/
+
+}
+/* about end */
+/* service Start */
+.icon-Service{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:var(--mainColor);
+    background-color:var(--scoundColor);
+    font-size:30px;
+    width:50px;
+    height:50px;
+    padding:30px;
+    border-radius:5px;
+    margin:10px 40px 0px 0px;
+    box-shadow: -2px 4px 5px #5553;
+    transition: all .9s;
+ }
+ /* service End */
+
+/* portfolio Start */
+.work-img{
+    padding:10px;  
+}
+.work-img img{  
+    border-radius:5px;
+    transition:all .9s;
+    width:100%;
+}
+.work-item{
+    position:relative;
+    overflow: hidden;
+}
+.layer{
+    position: absolute;
+    width:100%;
+    height:100%;
+    top:0px;
+    background-color: rgba(0, 0, 0, 0.361);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color:var(--scoundColor);
+    font-size: 20px;
+    transition: all .9s;
+    line-height:0px;
+    border-radius:5px;
+    overflow: hidden;
+    opacity:0;
+}
+.work-item:hover .layer{
+    opacity:1;
+
+}
+
+.work-item:hover img{
+    border-radius:50px;
+    transform: scale(1.3);
+    filter:blur(2px)
+}
+.portfolioContent li a{
+    position: relative;
+}
+.portfolioContent li a::after{
+    content: " ";
+    position: absolute;
+    width:40px;
+    height:2px;
+    background-color:var(--mainColor);
+    bottom:-3px;
+    left:50%;
+    transform: translateX(-47%);
+    opacity:0;
+    transition: all 1s;
+}
+.portfolioContent .nav-item:hover  a::after{
+opacity:1;
+}
+/* portfolio End */
+/* client start */
+.carousel-indicators [data-bs-target]{
+    border-radius:50%;
+    width:10px;
+    height:10px;
+    background-color:var(--grayColor);
+    margin:10px;
+}
+.carousel-indicators [data-bs-target]:hover{
+    border-radius:50%;
+    width:10px;
+    height:10px;
+    background-color:var(--mainColor);
+}
+.card-body img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+}
+.card{
+    border:none;
+    background-color:#f8f9fa;
+}
+.carousel-item{
+    overflow: unset;
+}
+/* client end*/
+/* resume Start */
+.history{
+background-color:var(--mainColor);
+padding:3px 10px;
+border-radius:5px;
+font-size: 12px;
+font-weight:600;
+}
+.education h4{
+font-weight: 480;
+}
+.downloud a{
+  color: #6c757d;
+  background-color: #fff;
+  border: #6c757d solid 2px;
+  border-radius: 50px;
+  box-shadow: -2px 4px 5px #5553;
+  padding:10px 30px; 
+  transition: all .5s;
+}
+
+
+.downloud a:hover{
+   background-color: #6c757d;
+   border:none;
+   border-radius: 50px;
+   box-shadow: -2px 4px 5px #5553;
+   color: #fff;
+}
+.progress{
+    height:8px;
+    margin-bottom:13px;
+}
+.progress-bar{
+      background-color: #20c997;
+}
+.track .subTitle{
+      padding:6px ;
+     font-size:13px;
+     font-weight:600;
+}
+/* resume End */
+
+/* contact start */
+.receiving-input .btn{
+    display: block;
+    margin:15px 5px 0px 0px;
+    background-color: #20c997;
+    padding:13px 40px;
+    border-radius:40px;
+    border: none;
+    box-shadow: #777777;
+    font-size:14px;
+    color: #fff;
+    transition:0.5s all; 
+}
+.tele-icon i{
+    color: #20c997;
+}
+/* contact END */
+
+/* Footer Strat */
+#footer{
+    font-size:13px;
+    font-weight:480;
+}
+#footer h6{
+    font-size:15px;
+}
+#footer h6:hover{
+    color: #20c997;
+}
+#footer p span{
+    color: #20c997;
+}
+/* Footer E n d*/
+
